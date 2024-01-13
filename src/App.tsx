@@ -18,7 +18,7 @@ function App() {
   }, [running]);
 
   return (
-    <div className="max-w-md flex flex-col items-center justify-center py-8">
+    <div className="max-w-md flex flex-col items-center justify-center py-8 min-h-screen">
       <h1 className="text-3xl font-semibold ">Stopwatch</h1>
       <div className="text-xl font-semibold py-4">
         <span> {("0" + Math.floor((time / 60000) % 60)).slice(-2)}: </span>
@@ -28,8 +28,7 @@ function App() {
       <div className=" w-1/3 max-w-sm flex flex-row justify-evenly ">
         {running ? (
           <button
-            className="btn btn-info"
-            // className="border rounded-lg py-5 px-3.5"
+            className="btn btn-error"
             onClick={() => {
               setRunning(false);
             }}
@@ -38,7 +37,7 @@ function App() {
           </button>
         ) : (
           <button
-            className="border rounded-lg p-10 py-1 px-3"
+            className="btn btn-success"
             onClick={() => {
               setRunning(true);
             }}
@@ -47,7 +46,7 @@ function App() {
           </button>
         )}
         <button
-          className="border rounded-lg py-1 px-2.5"
+          className="btn btn-info"
           onClick={() => {
             setTime(0);
           }}
