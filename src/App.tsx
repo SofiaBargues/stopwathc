@@ -47,6 +47,7 @@ function App() {
         )}
         <button
           className="btn btn-info"
+          disabled={running}
           onClick={() => {
             setTime(0);
           }}
