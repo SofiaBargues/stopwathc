@@ -5,13 +5,15 @@ function App() {
   const [time, setTime] = useState(0);
   const [running, setRunning] = useState(false);
 
+  let interval: any;
+
   useEffect(() => {
-    let interval: any;
     if (running) {
       interval = setInterval(() => {
         setTime((prevTime) => prevTime + 10);
       }, 10);
-    } else if (!running) {
+      console.log(interval);
+    } else {
       clearInterval(interval);
     }
     return () => clearInterval(interval);
