@@ -26,11 +26,12 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
+  border: 2cm;
   border-color: #646cff;
 }
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: 7px auto -webkit-focus-ring-color;
 }
 
 @media (prefers-color-scheme: light) {
